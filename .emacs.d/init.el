@@ -221,3 +221,10 @@
 (global-set-key (kbd "<f5>") 'bookmark-bmenu-list) ;; открыть список закладок
 (setq bookmark-default-file (concat user-emacs-directory "bookmarks")) ;; хранить закладки в файл bookmarks в .emacs.d
 
+
+;; set theme
+(load-theme 'tangotango)
+
+;; powerline
+(require 'powerline)
+(powerline-default-theme)
