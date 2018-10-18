@@ -242,3 +242,8 @@
 (require 'which-key)
 (which-key-mode)
 
+;; enable drug-stuff
+;; https://github.com/rejeep/drag-stuff.el
+(require 'drag-stuff)
+(drag-stuff-mode t)
+
