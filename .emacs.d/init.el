@@ -223,8 +223,22 @@
 
 
 ;; set theme
-(load-theme 'tangotango)
+(load-theme 'tangotango t)
 
 ;; powerline
 (require 'powerline)
 (powerline-default-theme)
+
+
+;; anaconda-mode for python buffer
+;; https://github.com/proofit404/anaconda-mode
+(add-hook 'python-mode-hook 'anaconda-mode)
+;; and add eldoc
+(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+
+
+;; enable which-key mode
+;;https://github.com/justbur/emacs-which-key
+(require 'which-key)
+(which-key-mode)
+
