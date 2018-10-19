@@ -59,6 +59,8 @@
 (global-set-key "\C-cl" 'org-store-link)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode)) ;; ассоциируем *.org файлы с org-mode
 (setq org-log-done t) ;; ставить дату выполнения задач
+(org-defkey org-mode-map (kbd "C-x <up>") 'org-move-subtree-up)
+(org-defkey org-mode-map (kbd "C-x <down>") 'org-move-subtree-down)
 
 ;; Inhibit startup/splash screen
 (setq inhibit-splash-screen   t)
@@ -176,13 +178,13 @@
     (windmove-default-keybindings 'meta))
 
 ;; Delete trailing whitespaces, format buffer and untabify when save buffer
-(defun format-current-buffer()
-    (indent-region (point-min) (point-max)))
+;;(defun format-current-buffer()
+;;    (indent-region (point-min) (point-max)))
 (defun untabify-current-buffer()
     (if (not indent-tabs-mode)
         (untabify (point-min) (point-max)))
     nil)
-(add-to-list 'write-file-functions 'format-current-buffer)
+;;(add-to-list 'write-file-functions 'format-current-buffer) ;; WARN: brokes saving file!!!
 (add-to-list 'write-file-functions 'untabify-current-buffer)
 (add-to-list 'write-file-functions 'delete-trailing-whitespace)
 
@@ -245,6 +247,6 @@
 
 ;; enable drug-stuff
 ;; https://github.com/rejeep/drag-stuff.el
-(require 'drag-stuff)
-(drag-stuff-mode t)
+;;(require 'drag-stuff)
+;;(drag-stuff-mode t)
 
