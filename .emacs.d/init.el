@@ -155,7 +155,7 @@
 
 ;; Scrolling settings
 (setq scroll-step               1) ;; вверх-вниз по 1 строке
-(setq scroll-margin            10) ;; сдвигать буфер верх/вниз когда курсор в 10 шагах от верхней/нижней границы  
+(setq scroll-margin            10) ;; сдвигать буфер верх/вниз когда курсор в 10 шагах от верхней/нижней границы
 (setq scroll-conservatively 10000)
 
 ;; Short messages
@@ -166,8 +166,8 @@
 
 ;; End of file newlines
 (setq require-final-newline    t) ;; добавить новую пустую строку в конец файла при сохранении
-(setq next-line-add-newlines nil) ;; не добавлять новую строку в конец при смещении 
-						            ;; курсора  стрелками
+(setq next-line-add-newlines nil) ;; не добавлять новую строку в конец при смещении
+                                    ;; курсора  стрелками
 
 ;; Highlight search resaults
 (setq search-highlight        t)
@@ -186,6 +186,8 @@
     nil)
 ;;(add-to-list 'write-file-functions 'format-current-buffer) ;; WARN: brokes saving file!!!
 (global-set-key (kbd "C-c f") (lambda () (interactive) (format-current-buffer)))
+;;(global-set-key (kbd "C-c C-f") (lambda () (interactive) (format-current-buffer)))
+;;(global-set-key (kbd "C-с а") (lambda () (interactive) (format-current-buffer))) ;; rus letter
 (add-to-list 'write-file-functions 'untabify-current-buffer)
 (add-to-list 'write-file-functions 'delete-trailing-whitespace)
 
@@ -220,7 +222,7 @@
 (setq bookmark-save-flag t) ;; автоматически сохранять закладки в файл
 (when (file-exists-p (concat user-emacs-directory "bookmarks"))
     (bookmark-load bookmark-default-file t)) ;; попытаться найти и открыть файл с закладками
-(global-set-key (kbd "<f3>") 'bookmark-set) ;; создать закладку по F3 
+(global-set-key (kbd "<f3>") 'bookmark-set) ;; создать закладку по F3
 (global-set-key (kbd "<f4>") 'bookmark-jump) ;; прыгнуть на закладку по F4
 (global-set-key (kbd "<f5>") 'bookmark-bmenu-list) ;; открыть список закладок
 (setq bookmark-default-file (concat user-emacs-directory "bookmarks")) ;; хранить закладки в файл bookmarks в .emacs.d
@@ -250,4 +252,27 @@
 ;; https://github.com/rejeep/drag-stuff.el
 ;;(require 'drag-stuff)
 ;;(drag-stuff-mode t)
+
+;; enable reverese-im
+;; https://github.com/a13/reverse-im.el
+(require 'use-package)
+(use-package reverse-im
+  :config
+  (reverse-im-activate "russian-computer"))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (reverse-im which-key tangotango-theme powerline flatland-theme drag-stuff auto-complete anaconda-mode))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
 
