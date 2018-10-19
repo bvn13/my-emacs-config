@@ -178,13 +178,14 @@
     (windmove-default-keybindings 'meta))
 
 ;; Delete trailing whitespaces, format buffer and untabify when save buffer
-;;(defun format-current-buffer()
-;;    (indent-region (point-min) (point-max)))
+(defun format-current-buffer()
+    (indent-region (point-min) (point-max)))
 (defun untabify-current-buffer()
     (if (not indent-tabs-mode)
         (untabify (point-min) (point-max)))
     nil)
 ;;(add-to-list 'write-file-functions 'format-current-buffer) ;; WARN: brokes saving file!!!
+(global-set-key (kbd "C-c f") (lambda () (interactive) (format-current-buffer)))
 (add-to-list 'write-file-functions 'untabify-current-buffer)
 (add-to-list 'write-file-functions 'delete-trailing-whitespace)
 
