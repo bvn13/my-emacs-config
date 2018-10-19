@@ -57,7 +57,8 @@
 (global-set-key "\C-ca" 'org-agenda) ;; поределение клавиатурных комбинаций для внутренних
 (global-set-key "\C-cb" 'org-iswitchb) ;; подрежимов org-mode
 (global-set-key "\C-cl" 'org-store-link)
-(add-to-list 'auto-mode-alist '("\\.org$" . Org-mode)) ;; ассоциируем *.org файлы с org-mode
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode)) ;; ассоциируем *.org файлы с org-mode
+(setq org-log-done t) ;; ставить дату выполнения задач
 
 ;; Inhibit startup/splash screen
 (setq inhibit-splash-screen   t)
@@ -106,7 +107,7 @@
 
 ;; Start window size
 (when (window-system)
-    (set-frame-size (selected-frame) 100 50))
+    (set-frame-size (selected-frame) 140 50))
 
 ;; IDO plugin
 (require 'ido)
