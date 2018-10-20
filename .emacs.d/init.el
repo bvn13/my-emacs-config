@@ -29,7 +29,7 @@
 ;; Unix path-variable
 (when (system-is-linux)
     ;;(setq unix-sbcl-bin          "/usr/bin/sbcl")
-    (setq unix-init-path         "~/.emacs.d")
+    (setq unix-init-path         "~/.emacs.d/linux")
     (setq unix-init-ct-path      "~/.emacs.d/plugins/color-theme")
     (setq unix-init-ac-path      "~/.emacs.d/plugins/auto-complete")
     ;;(setq unix-init-slime-path   "/usr/share/common-lisp/source/slime/")
@@ -78,7 +78,9 @@
 (tooltip-mode      -1)
 (menu-bar-mode      1) ;; отключаем графическое меню
 (tool-bar-mode     -1) ;; отключаем tool-bar
-(scroll-bar-mode   -1) ;; отключаем полосу прокрутки
+(if (system-is-windows)
+  (scroll-bar-mode   -1) ;; отключаем полосу прокрутки
+  )
 (blink-cursor-mode -1) ;; курсор не мигает
 (setq use-dialog-box     nil) ;; никаких графических диалогов и окон - все через минибуфер
 (setq redisplay-dont-pause t)  ;; лучшая отрисовка буфера
@@ -93,9 +95,11 @@
 
 
 ;; Fringe settings
-(fringe-mode '(8 . 0)) ;; органичиталь текста только слева
-(setq-default indicate-empty-lines t) ;; отсутствие строки выделить глифами рядом с полосой с номером строки
-(setq-default indicate-buffer-boundaries 'left) ;; индикация только слева
+(when (system-is-windows)
+  (fringe-mode '(8 . 0)) ;; органичиталь текста только слева
+  (setq-default indicate-empty-lines t) ;; отсутствие строки выделить глифами рядом с полосой с номером строки
+  (setq-default indicate-buffer-boundaries 'left) ;; индикация только слева
+  )
 
 ;; Display file size/time in mode-line
 (setq display-time-24hr-format t) ;; 24-часовой временной формат в mode-line
@@ -274,5 +278,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-
