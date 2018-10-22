@@ -25,6 +25,7 @@
     (setq win-init-ac-path      "%HOME%/.emacs.d/plugins/auto-complete")
     ;;(setq win-init-slime-path   "C:/slime")
     (setq win-init-ac-dict-path "%HOME%/.emacs.d/plugins/auto-complete/dict"))
+    (set-default-font "Consolas")
 
 ;; Unix path-variable
 (when (system-is-linux)
