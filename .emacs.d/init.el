@@ -24,8 +24,8 @@
     (setq win-init-ct-path      "%HOME%/.emacs.d/plugins/color-theme")
     (setq win-init-ac-path      "%HOME%/.emacs.d/plugins/auto-complete")
     ;;(setq win-init-slime-path   "C:/slime")
-    (setq win-init-ac-dict-path "%HOME%/.emacs.d/plugins/auto-complete/dict"))
-    (set-default-font "Consolas")
+    (setq win-init-ac-dict-path "%HOME%/.emacs.d/plugins/auto-complete/dict")
+    (set-default-font "Consolas"))
 
 ;; Unix path-variable
 (when (system-is-linux)
@@ -34,7 +34,8 @@
     (setq unix-init-ct-path      "~/.emacs.d/plugins/color-theme")
     (setq unix-init-ac-path      "~/.emacs.d/plugins/auto-complete")
     ;;(setq unix-init-slime-path   "/usr/share/common-lisp/source/slime/")
-    (setq unix-init-ac-dict-path "~/.emacs.d/plugins/auto-complete/dict"))
+    (setq unix-init-ac-dict-path "~/.emacs.d/plugins/auto-complete/dict")
+    (set-default-font "Source Code Pro for Powerline"))
 
 
 ;; Imenu
