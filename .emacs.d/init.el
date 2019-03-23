@@ -35,7 +35,8 @@
     (setq unix-init-ac-path      "~/.emacs.d/plugins/auto-complete")
     ;;(setq unix-init-slime-path   "/usr/share/common-lisp/source/slime/")
     (setq unix-init-ac-dict-path "~/.emacs.d/plugins/auto-complete/dict")
-    (set-default-font "Source Code Pro for Powerline"))
+    (set-default-font "Source Code Pro for Powerline")
+    (set-face-attribute 'default nil :height 100))
 
 
 ;; Imenu
