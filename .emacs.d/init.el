@@ -35,15 +35,19 @@
     (setq unix-init-ac-path      "~/.emacs.d/plugins/auto-complete")
     ;;(setq unix-init-slime-path   "/usr/share/common-lisp/source/slime/")
     (setq unix-init-ac-dict-path "~/.emacs.d/plugins/auto-complete/dict")
-    (set-default-font "Source Code Pro for Powerline")
+    ;;(set-default-font "Source Code Pro for Powerline")
+    ;;(set-default-font "Meslo LG L DZ Regular for Powerline")
+    ;;(set-default-font "DejaVu Sans Mono for Powerline")
+    ;;(set-default-font "Go Mono for Powerline")
+    (set-default-font "Iosevka Medium")
     (set-face-attribute 'default nil :height 100))
 
 
 ;; Imenu
 (require 'imenu)
-(setq imenu-auto-rescan      t) ;; автоматически обновлять список функций в буфере
-(setq imenu-use-popup-menu nil) ;; диалоги Imenu только в минибуфере
-(global-set-key (kbd "<f6>") 'imenu) ;; вызов Imenu на F6
+(setq imenu-auto-rescan      t) ;; Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РѕР±РЅРѕРІР»СЏС‚СЊ СЃРїРёСЃРѕРє С„СѓРЅРєС†РёР№ РІ Р±СѓС„РµСЂРµ
+(setq imenu-use-popup-menu nil) ;; РґРёР°Р»РѕРіРё Imenu С‚РѕР»СЊРєРѕ РІ РјРёРЅРёР±СѓС„РµСЂРµ
+(global-set-key (kbd "<f6>") 'imenu) ;; РІС‹Р·РѕРІ Imenu РЅР° F6
 
 ;; Display the name of the current buffer in the title bar
 (setq frame-title-format "GNU Emacs: %b")
@@ -56,62 +60,62 @@
     (add-to-list 'load-path unix-init-path))
 
 ;; Org-mode settings
-(require 'org) ;; Вызвать org-mode
-(global-set-key "\C-ca" 'org-agenda) ;; поределение клавиатурных комбинаций для внутренних
-(global-set-key "\C-cb" 'org-iswitchb) ;; подрежимов org-mode
+(require 'org) ;; Р’С‹Р·РІР°С‚СЊ org-mode
+(global-set-key "\C-ca" 'org-agenda) ;; РїРѕСЂРµРґРµР»РµРЅРёРµ РєР»Р°РІРёР°С‚СѓСЂРЅС‹С… РєРѕРјР±РёРЅР°С†РёР№ РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРёС…
+(global-set-key "\C-cb" 'org-iswitchb) ;; РїРѕРґСЂРµР¶РёРјРѕРІ org-mode
 (global-set-key "\C-cl" 'org-store-link)
-(add-to-list 'auto-mode-alist '("\\.org$" . org-mode)) ;; ассоциируем *.org файлы с org-mode
-(setq org-log-done t) ;; ставить дату выполнения задач
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode)) ;; Р°СЃСЃРѕС†РёРёСЂСѓРµРј *.org С„Р°Р№Р»С‹ СЃ org-mode
+(setq org-log-done t) ;; СЃС‚Р°РІРёС‚СЊ РґР°С‚Сѓ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РґР°С‡
 (org-defkey org-mode-map (kbd "C-x <up>") 'org-move-subtree-up)
 (org-defkey org-mode-map (kbd "C-x <down>") 'org-move-subtree-down)
 
 ;; Inhibit startup/splash screen
 (setq inhibit-splash-screen   t)
-(setq ingibit-startup-message t) ;; экран приветствия можно вызвать комбинацией C-h C-a
+(setq ingibit-startup-message t) ;; СЌРєСЂР°РЅ РїСЂРёРІРµС‚СЃС‚РІРёСЏ РјРѕР¶РЅРѕ РІС‹Р·РІР°С‚СЊ РєРѕРјР±РёРЅР°С†РёРµР№ C-h C-a
 
 ;; Show-paren-mode settings
-(show-paren-mode t) ;; включить выделение выражений между {},[],()
-(setq show-paren-style 'expression) ;; выделить цветом выражения между {},[],()
+(show-paren-mode t) ;; РІРєР»СЋС‡РёС‚СЊ РІС‹РґРµР»РµРЅРёРµ РІС‹СЂР°Р¶РµРЅРёР№ РјРµР¶РґСѓ {},[],()
+(setq show-paren-style 'expression) ;; РІС‹РґРµР»РёС‚СЊ С†РІРµС‚РѕРј РІС‹СЂР°Р¶РµРЅРёСЏ РјРµР¶РґСѓ {},[],()
 
 ;; Electric-modes settings
-(electric-pair-mode    1) ;; автозакрытие {},[],() с переводом курсора внутрь скобок
-(electric-indent-mode -1) ;; отключить индентацию  electric-indent-mod'ом (default in Emacs-24.4)
+(electric-pair-mode    1) ;; Р°РІС‚РѕР·Р°РєСЂС‹С‚РёРµ {},[],() СЃ РїРµСЂРµРІРѕРґРѕРј РєСѓСЂСЃРѕСЂР° РІРЅСѓС‚СЂСЊ СЃРєРѕР±РѕРє
+(electric-indent-mode -1) ;; РѕС‚РєР»СЋС‡РёС‚СЊ РёРЅРґРµРЅС‚Р°С†РёСЋ  electric-indent-mod'РѕРј (default in Emacs-24.4)
 
 ;; Disable GUI components
 (tooltip-mode      -1)
-(menu-bar-mode      1) ;; отключаем графическое меню
-(tool-bar-mode     -1) ;; отключаем tool-bar
+(menu-bar-mode      1) ;; РѕС‚РєР»СЋС‡Р°РµРј РіСЂР°С„РёС‡РµСЃРєРѕРµ РјРµРЅСЋ
+(tool-bar-mode     -1) ;; РѕС‚РєР»СЋС‡Р°РµРј tool-bar
 (if (system-is-windows)
-  (scroll-bar-mode   -1) ;; отключаем полосу прокрутки
+  (scroll-bar-mode   -1) ;; РѕС‚РєР»СЋС‡Р°РµРј РїРѕР»РѕСЃСѓ РїСЂРѕРєСЂСѓС‚РєРё
   )
-(blink-cursor-mode -1) ;; курсор не мигает
-(setq use-dialog-box     nil) ;; никаких графических диалогов и окон - все через минибуфер
-(setq redisplay-dont-pause t)  ;; лучшая отрисовка буфера
-(setq ring-bell-function 'ignore) ;; отключить звуковой сигнал
+(blink-cursor-mode -1) ;; РєСѓСЂСЃРѕСЂ РЅРµ РјРёРіР°РµС‚
+(setq use-dialog-box     nil) ;; РЅРёРєР°РєРёС… РіСЂР°С„РёС‡РµСЃРєРёС… РґРёР°Р»РѕРіРѕРІ Рё РѕРєРѕРЅ - РІСЃРµ С‡РµСЂРµР· РјРёРЅРёР±СѓС„РµСЂ
+(setq redisplay-dont-pause t)  ;; Р»СѓС‡С€Р°СЏ РѕС‚СЂРёСЃРѕРІРєР° Р±СѓС„РµСЂР°
+(setq ring-bell-function 'ignore) ;; РѕС‚РєР»СЋС‡РёС‚СЊ Р·РІСѓРєРѕРІРѕР№ СЃРёРіРЅР°Р»
 
 ;; Linum plugin
-(require 'linum) ;; вызвать Linum
-(line-number-mode   t) ;; показать номер строки в mode-line
-(global-linum-mode  t) ;; показывать номера строк во всех буферах
-(column-number-mode t) ;; показать номер столбца в mode-line
-(setq linum-format " %d") ;; задаем формат нумерации строк
+(require 'linum) ;; РІС‹Р·РІР°С‚СЊ Linum
+(line-number-mode   t) ;; РїРѕРєР°Р·Р°С‚СЊ РЅРѕРјРµСЂ СЃС‚СЂРѕРєРё РІ mode-line
+(global-linum-mode  t) ;; РїРѕРєР°Р·С‹РІР°С‚СЊ РЅРѕРјРµСЂР° СЃС‚СЂРѕРє РІРѕ РІСЃРµС… Р±СѓС„РµСЂР°С…
+(column-number-mode t) ;; РїРѕРєР°Р·Р°С‚СЊ РЅРѕРјРµСЂ СЃС‚РѕР»Р±С†Р° РІ mode-line
+(setq linum-format " %d") ;; Р·Р°РґР°РµРј С„РѕСЂРјР°С‚ РЅСѓРјРµСЂР°С†РёРё СЃС‚СЂРѕРє
 
 
 ;; Fringe settings
 (when (system-is-windows)
-  (fringe-mode '(8 . 0)) ;; органичиталь текста только слева
-  (setq-default indicate-empty-lines t) ;; отсутствие строки выделить глифами рядом с полосой с номером строки
-  (setq-default indicate-buffer-boundaries 'left) ;; индикация только слева
+  (fringe-mode '(8 . 0)) ;; РѕСЂРіР°РЅРёС‡РёС‚Р°Р»СЊ С‚РµРєСЃС‚Р° С‚РѕР»СЊРєРѕ СЃР»РµРІР°
+  (setq-default indicate-empty-lines t) ;; РѕС‚СЃСѓС‚СЃС‚РІРёРµ СЃС‚СЂРѕРєРё РІС‹РґРµР»РёС‚СЊ РіР»РёС„Р°РјРё СЂСЏРґРѕРј СЃ РїРѕР»РѕСЃРѕР№ СЃ РЅРѕРјРµСЂРѕРј СЃС‚СЂРѕРєРё
+  (setq-default indicate-buffer-boundaries 'left) ;; РёРЅРґРёРєР°С†РёСЏ С‚РѕР»СЊРєРѕ СЃР»РµРІР°
   )
 
 ;; Display file size/time in mode-line
-(setq display-time-24hr-format t) ;; 24-часовой временной формат в mode-line
-(display-time-mode             t) ;; показывать часы в mode-line
-(size-indication-mode          t) ;; размер файла в %-ах
+(setq display-time-24hr-format t) ;; 24-С‡Р°СЃРѕРІРѕР№ РІСЂРµРјРµРЅРЅРѕР№ С„РѕСЂРјР°С‚ РІ mode-line
+(display-time-mode             t) ;; РїРѕРєР°Р·С‹РІР°С‚СЊ С‡Р°СЃС‹ РІ mode-line
+(size-indication-mode          t) ;; СЂР°Р·РјРµСЂ С„Р°Р№Р»Р° РІ %-Р°С…
 
 
 ;; Line wrapping
-(setq word-wrap          t) ;; переносить по словам
+(setq word-wrap          t) ;; РїРµСЂРµРЅРѕСЃРёС‚СЊ РїРѕ СЃР»РѕРІР°Рј
 (global-visual-line-mode t)
 
 ;; Start window size
@@ -129,8 +133,8 @@
 ;; Buffer Selection and ibuffer settings
 (require 'bs)
 (require 'ibuffer)
-(defalias 'list-buffers 'ibuffer) ;; отдельный список буферов при нажатии C-x C-b
-(global-set-key (kbd "<f2>") 'bs-show) ;; запуск buffer selection кнопкой F2
+(defalias 'list-buffers 'ibuffer) ;; РѕС‚РґРµР»СЊРЅС‹Р№ СЃРїРёСЃРѕРє Р±СѓС„РµСЂРѕРІ РїСЂРё РЅР°Р¶Р°С‚РёРё C-x C-b
+(global-set-key (kbd "<f2>") 'bs-show) ;; Р·Р°РїСѓСЃРє buffer selection РєРЅРѕРїРєРѕР№ F2
 
 ;; Color-theme definition <http://www.emacswiki.org/emacs/ColorTheme>
 (defun color-theme-init()
@@ -148,21 +152,21 @@
 
 ;; Syntax highlighting
 (require 'font-lock)
-(global-font-lock-mode             t) ;; включено с версии Emacs-22. На всякий...
+(global-font-lock-mode             t) ;; РІРєР»СЋС‡РµРЅРѕ СЃ РІРµСЂСЃРёРё Emacs-22. РќР° РІСЃСЏРєРёР№...
 (setq font-lock-maximum-decoration t)
 
 ;; Indent settings
-(setq-default indent-tabs-mode nil) ;; отключить возможность ставить отступы TAB'ом
-(setq-default tab-width          4) ;; ширина табуляции - 4 пробельных символа
+(setq-default indent-tabs-mode nil) ;; РѕС‚РєР»СЋС‡РёС‚СЊ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ СЃС‚Р°РІРёС‚СЊ РѕС‚СЃС‚СѓРїС‹ TAB'РѕРј
+(setq-default tab-width          4) ;; С€РёСЂРёРЅР° С‚Р°Р±СѓР»СЏС†РёРё - 4 РїСЂРѕР±РµР»СЊРЅС‹С… СЃРёРјРІРѕР»Р°
 (setq-default c-basic-offset     4)
-(setq-default standart-indent    4) ;; стандартная ширина отступа - 4 пробельных символа
-(setq-default lisp-body-indent   4) ;; сдвигать Lisp-выражения на 4 пробельных символа
-(global-set-key (kbd "RET") 'newline-and-indent) ;; при нажатии Enter перевести каретку и сделать отступ
+(setq-default standart-indent    4) ;; СЃС‚Р°РЅРґР°СЂС‚РЅР°СЏ С€РёСЂРёРЅР° РѕС‚СЃС‚СѓРїР° - 4 РїСЂРѕР±РµР»СЊРЅС‹С… СЃРёРјРІРѕР»Р°
+(setq-default lisp-body-indent   4) ;; СЃРґРІРёРіР°С‚СЊ Lisp-РІС‹СЂР°Р¶РµРЅРёСЏ РЅР° 4 РїСЂРѕР±РµР»СЊРЅС‹С… СЃРёРјРІРѕР»Р°
+(global-set-key (kbd "RET") 'newline-and-indent) ;; РїСЂРё РЅР°Р¶Р°С‚РёРё Enter РїРµСЂРµРІРµСЃС‚Рё РєР°СЂРµС‚РєСѓ Рё СЃРґРµР»Р°С‚СЊ РѕС‚СЃС‚СѓРї
 (setq lisp-indent-function  'common-lisp-indent-function)
 
 ;; Scrolling settings
-(setq scroll-step               1) ;; вверх-вниз по 1 строке
-(setq scroll-margin            10) ;; сдвигать буфер верх/вниз когда курсор в 10 шагах от верхней/нижней границы
+(setq scroll-step               1) ;; РІРІРµСЂС…-РІРЅРёР· РїРѕ 1 СЃС‚СЂРѕРєРµ
+(setq scroll-margin            10) ;; СЃРґРІРёРіР°С‚СЊ Р±СѓС„РµСЂ РІРµСЂС…/РІРЅРёР· РєРѕРіРґР° РєСѓСЂСЃРѕСЂ РІ 10 С€Р°РіР°С… РѕС‚ РІРµСЂС…РЅРµР№/РЅРёР¶РЅРµР№ РіСЂР°РЅРёС†С‹
 (setq scroll-conservatively 10000)
 
 ;; Short messages
@@ -172,9 +176,9 @@
 (setq x-select-enable-clipboard t)
 
 ;; End of file newlines
-(setq require-final-newline    t) ;; добавить новую пустую строку в конец файла при сохранении
-(setq next-line-add-newlines nil) ;; не добавлять новую строку в конец при смещении
-                                    ;; курсора  стрелками
+(setq require-final-newline    t) ;; РґРѕР±Р°РІРёС‚СЊ РЅРѕРІСѓСЋ РїСѓСЃС‚СѓСЋ СЃС‚СЂРѕРєСѓ РІ РєРѕРЅРµС† С„Р°Р№Р»Р° РїСЂРё СЃРѕС…СЂР°РЅРµРЅРёРё
+(setq next-line-add-newlines nil) ;; РЅРµ РґРѕР±Р°РІР»СЏС‚СЊ РЅРѕРІСѓСЋ СЃС‚СЂРѕРєСѓ РІ РєРѕРЅРµС† РїСЂРё СЃРјРµС‰РµРЅРёРё
+                                    ;; РєСѓСЂСЃРѕСЂР°  СЃС‚СЂРµР»РєР°РјРё
 
 ;; Highlight search resaults
 (setq search-highlight        t)
@@ -194,7 +198,7 @@
 ;;(add-to-list 'write-file-functions 'format-current-buffer) ;; WARN: brokes saving file!!!
 (global-set-key (kbd "C-c f") (lambda () (interactive) (format-current-buffer)))
 ;;(global-set-key (kbd "C-c C-f") (lambda () (interactive) (format-current-buffer)))
-;;(global-set-key (kbd "C-с а") (lambda () (interactive) (format-current-buffer))) ;; rus letter
+;;(global-set-key (kbd "C-СЃ Р°") (lambda () (interactive) (format-current-buffer))) ;; rus letter
 (add-to-list 'write-file-functions 'untabify-current-buffer)
 (add-to-list 'write-file-functions 'delete-trailing-whitespace)
 
@@ -210,11 +214,11 @@
     (setq ac-auto-show-menu    t)
     (global-auto-complete-mode t)
     (add-to-list 'ac-modes   'lisp-mode)
-    (add-to-list 'ac-sources 'ac-source-semantic) ;; искать автодополнения в CEDET
-    (add-to-list 'ac-sources 'ac-source-variables) ;; среди переменных
-    (add-to-list 'ac-sources 'ac-source-functions) ;; в названиях функций
-    (add-to-list 'ac-sources 'ac-source-dictionary) ;; в той папке где редактируемый буфер
-    (add-to-list 'ac-sources 'ac-source-words-in-all-buffer) ;; по всему буферу
+    (add-to-list 'ac-sources 'ac-source-semantic) ;; РёСЃРєР°С‚СЊ Р°РІС‚РѕРґРѕРїРѕР»РЅРµРЅРёСЏ РІ CEDET
+    (add-to-list 'ac-sources 'ac-source-variables) ;; СЃСЂРµРґРё РїРµСЂРµРјРµРЅРЅС‹С…
+    (add-to-list 'ac-sources 'ac-source-functions) ;; РІ РЅР°Р·РІР°РЅРёСЏС… С„СѓРЅРєС†РёР№
+    (add-to-list 'ac-sources 'ac-source-dictionary) ;; РІ С‚РѕР№ РїР°РїРєРµ РіРґРµ СЂРµРґР°РєС‚РёСЂСѓРµРјС‹Р№ Р±СѓС„РµСЂ
+    (add-to-list 'ac-sources 'ac-source-words-in-all-buffer) ;; РїРѕ РІСЃРµРјСѓ Р±СѓС„РµСЂСѓ
     (add-to-list 'ac-sources 'ac-source-files-in-current-dir))
 (if (system-is-windows)
     (when (file-directory-p win-init-ac-path)
@@ -226,13 +230,13 @@
 
 ;; Bookmark settings
 (require 'bookmark)
-(setq bookmark-save-flag t) ;; автоматически сохранять закладки в файл
+(setq bookmark-save-flag t) ;; Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё СЃРѕС…СЂР°РЅСЏС‚СЊ Р·Р°РєР»Р°РґРєРё РІ С„Р°Р№Р»
 (when (file-exists-p (concat user-emacs-directory "bookmarks"))
-    (bookmark-load bookmark-default-file t)) ;; попытаться найти и открыть файл с закладками
-(global-set-key (kbd "<f3>") 'bookmark-set) ;; создать закладку по F3
-(global-set-key (kbd "<f4>") 'bookmark-jump) ;; прыгнуть на закладку по F4
-(global-set-key (kbd "<f5>") 'bookmark-bmenu-list) ;; открыть список закладок
-(setq bookmark-default-file (concat user-emacs-directory "bookmarks")) ;; хранить закладки в файл bookmarks в .emacs.d
+    (bookmark-load bookmark-default-file t)) ;; РїРѕРїС‹С‚Р°С‚СЊСЃСЏ РЅР°Р№С‚Рё Рё РѕС‚РєСЂС‹С‚СЊ С„Р°Р№Р» СЃ Р·Р°РєР»Р°РґРєР°РјРё
+(global-set-key (kbd "<f3>") 'bookmark-set) ;; СЃРѕР·РґР°С‚СЊ Р·Р°РєР»Р°РґРєСѓ РїРѕ F3
+(global-set-key (kbd "<f4>") 'bookmark-jump) ;; РїСЂС‹РіРЅСѓС‚СЊ РЅР° Р·Р°РєР»Р°РґРєСѓ РїРѕ F4
+(global-set-key (kbd "<f5>") 'bookmark-bmenu-list) ;; РѕС‚РєСЂС‹С‚СЊ СЃРїРёСЃРѕРє Р·Р°РєР»Р°РґРѕРє
+(setq bookmark-default-file (concat user-emacs-directory "bookmarks")) ;; С…СЂР°РЅРёС‚СЊ Р·Р°РєР»Р°РґРєРё РІ С„Р°Р№Р» bookmarks РІ .emacs.d
 
 
 ;; set theme
@@ -306,6 +310,38 @@
         org-export-odt-preferred-output-format "odt"
         org-export-odt-convert-process "\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\"")
   (message "SOFFICE path not found")))
+
+;; insert date
+(global-set-key (kbd "C-c d") 'insert-standard-date)
+(global-set-key (kbd "C-c C-c d") 'insert-date)
+(defun insert-date (prefix)
+    "Insert the current date. With prefix-argument, use ISO format. With
+   two prefix arguments, write out the day and month name."
+    (interactive "P")
+    (let ((format (cond
+                   ((not prefix) "%d.%m.%Y")
+                   ((equal prefix '(4)) "%Y-%m-%d")
+                   ((equal prefix '(16)) "%A, %d. %B %Y")))
+          (system-time-locale "de_DE"))
+      (insert (format-time-string format))))
+(defun insert-date (format)
+    "Wrapper around format-time-string."
+    (interactive "MFormat: ")
+    (insert (format-time-string format)))
+(defun insert-standard-date ()
+    "Inserts standard date time string."
+    (interactive)
+    (insert (format-time-string "%F %T")))
+
+;; changed emphasis - org-mode look
+(setq org-emphasis-alist
+  '(("*" (bold :foreground "Orange" ))
+    ("/" italic)
+    ("_" underline)
+    ("=" (:background "maroon" :foreground "white"))
+    ;;("~" (:background "deep sky blue" :foreground "MidnightBlue"))
+    ("~" (bold :background "dark grey" :foreground "white"))
+    ("+" (:strike-through t))))
 
 
 (custom-set-variables
@@ -384,7 +420,7 @@ static char *gnus-pointer[] = {
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (project-explorer neotree multiple-cursors telephone-line darktooth-theme spacemacs-theme sublime-themes doom-themes badger-theme nova-theme monokai-theme busybee-theme alect-themes gruvbox-theme which-key use-package tangotango-theme reverse-im powerline flatland-theme drag-stuff auto-complete anaconda-mode)))
+    (memoize markdown-mode+ markdown-preview-eww project-explorer neotree multiple-cursors telephone-line darktooth-theme spacemacs-theme sublime-themes doom-themes badger-theme nova-theme monokai-theme busybee-theme alect-themes gruvbox-theme which-key use-package tangotango-theme reverse-im powerline flatland-theme drag-stuff auto-complete anaconda-mode)))
  '(pdf-view-midnight-colors (quote ("#fdf4c1" . "#1d2021")))
  '(pos-tip-background-color "#FFFACE")
  '(pos-tip-foreground-color "#272822")
