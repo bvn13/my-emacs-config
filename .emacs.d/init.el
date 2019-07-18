@@ -344,6 +344,14 @@
     ("+" (:strike-through t))))
 
 
+;; Markdown mode
+(use-package markdown-mode
+  :ensure t
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -420,7 +428,7 @@ static char *gnus-pointer[] = {
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (memoize markdown-mode+ markdown-preview-eww project-explorer neotree multiple-cursors telephone-line darktooth-theme spacemacs-theme sublime-themes doom-themes badger-theme nova-theme monokai-theme busybee-theme alect-themes gruvbox-theme which-key use-package tangotango-theme reverse-im powerline flatland-theme drag-stuff auto-complete anaconda-mode)))
+    (markdown-mode memoize markdown-mode+ markdown-preview-eww project-explorer neotree multiple-cursors telephone-line darktooth-theme spacemacs-theme sublime-themes doom-themes badger-theme nova-theme monokai-theme busybee-theme alect-themes gruvbox-theme which-key use-package tangotango-theme reverse-im powerline flatland-theme drag-stuff auto-complete anaconda-mode)))
  '(pdf-view-midnight-colors (quote ("#fdf4c1" . "#1d2021")))
  '(pos-tip-background-color "#FFFACE")
  '(pos-tip-foreground-color "#272822")
