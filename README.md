@@ -18,3 +18,10 @@ __in progress__
 ### Org-Mode
 
 1. type `<s`+Ent to insert code block
+
+## Features
+
+### OS Shell
+
+1. `M-x shell` opens OS shell in separate buffer to run system commands interactivelly
+2. `M-x term` opens OS shell in separate buffer to run system commands interactivelly with full terminal emulation
