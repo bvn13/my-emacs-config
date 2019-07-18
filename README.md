@@ -30,8 +30,10 @@ __in progress__
 
 #### Buffers
 
-1. `C-c b` - select next buffer to change to
-2. `C-c C-b` - select next buffer to change to in separate buffer (opens separate layout with opened buffers with full description)
+1. `C-x b` - select next buffer to change to
+2. `C-x C-b` - select next buffer to change to in separate buffer (opens separate layout with opened buffers with full description)
+3. `C-x C-k` - kill current buffer
+
 
 ### Accessories
 
