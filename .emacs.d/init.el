@@ -340,7 +340,7 @@
     ("_" underline)
     ("=" (:background "maroon" :foreground "white"))
     ;;("~" (:background "deep sky blue" :foreground "MidnightBlue"))
-    ("~" (bold :background "dark grey" :foreground "white"))
+    ("~" (bold :background "#F3D3B4" :foreground "#965F28"))
     ("+" (:strike-through t))))
 
 
