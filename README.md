@@ -1,6 +1,4 @@
-# my-emacs-config
-My EMACS configuration
-
+# My EMACS configuration
 
 ## Key bindings:
 
@@ -8,7 +6,32 @@ __in progress__
 
 ### General
 
-1. `
+1. `C-g C-g` - cancel any operation
+2. `C-x C-s` - save current buffer to file
+3. `C-c C-f` - open file in current buffer (a new file can be created if absent)
+4. `C-x C-x` - close emacs
+
+#### Copy/Paste
+
+1. `S-LEFT/RIGHT/UP/DOWN` - selec region
+2. `C-SPACE` - start region selecting
+3. `C-g` - cancel region selecting
+4. `M-w` - copy region into clipboard
+5. `C-w` - copy region into clipboard with removing it
+6. `C-y`/`S-INSERT` - paste clipboard under cursor position
+
+#### Layout
+
+1. `C-x 1` - single layout
+2. `C-x 2` - vertical layout
+3. `C-x 3` - horizontal layout
+4. `C-x o` - switch to the next buffer in layout
+5. `C-x 0` - hide current buffer from layout
+
+#### Buffers
+
+1. `C-c b` - select next buffer to change to
+2. `C-c C-b` - select next buffer to change to in separate buffer (opens separate layout with opened buffers with full description)
 
 ### Accessories
 
