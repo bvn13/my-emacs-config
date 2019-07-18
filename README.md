@@ -33,7 +33,7 @@ __in progress__
 1. `C-x b` - select next buffer to change to
 2. `C-x C-b` - select next buffer to change to in separate buffer (opens separate layout with opened buffers with full description)
 3. `C-x C-k` - kill current buffer
-
+4. `C-x k` - kill buffer with prompting
 
 ### Accessories
 
