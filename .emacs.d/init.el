@@ -8,8 +8,6 @@
   (package-refresh-contents))
 
 
-
-
 ;; System-type definition
 (defun system-is-linux()
     (string-equal system-type "gnu/linux"))
@@ -42,221 +40,64 @@
     (set-default-font "Iosevka Medium")
     (set-face-attribute 'default nil :height 100))
 
-
-;; Imenu
-(require 'imenu)
-(setq imenu-auto-rescan      t) ;; автоматически обновлять список функций в буфере
-(setq imenu-use-popup-menu nil) ;; диалоги Imenu только в минибуфере
-(global-set-key (kbd "<f6>") 'imenu) ;; вызов Imenu на F6
-
-;; Display the name of the current buffer in the title bar
-(setq frame-title-format "GNU Emacs: %b")
-
-
 ;; Load path for plugins
 (if (system-is-windows)
     (add-to-list 'load-path win-init-path))
 (if (system-is-linux)
     (add-to-list 'load-path unix-init-path))
 
-;; Org-mode settings
-(require 'org) ;; Вызвать org-mode
-(global-set-key "\C-ca" 'org-agenda) ;; поределение клавиатурных комбинаций для внутренних
-(global-set-key "\C-cb" 'org-iswitchb) ;; подрежимов org-mode
-(global-set-key "\C-cl" 'org-store-link)
-(add-to-list 'auto-mode-alist '("\\.org$" . org-mode)) ;; ассоциируем *.org файлы с org-mode
-(setq org-log-done t) ;; ставить дату выполнения задач
-(org-defkey org-mode-map (kbd "C-x <up>") 'org-move-subtree-up)
-(org-defkey org-mode-map (kbd "C-x <down>") 'org-move-subtree-down)
 
-;; Inhibit startup/splash screen
-(setq inhibit-splash-screen   t)
-(setq ingibit-startup-message t) ;; экран приветствия можно вызвать комбинацией C-h C-a
+;; recursive loading config-files
+(defun recursive-subdirs (directory &optional withroot)
+  "Return a unsorted list of names of directories in DIRECTORY recursively.
+If WITHROOT is non-nil, also DIRECTORY will be include."
+  (let (subdirs)
+    (dolist (element (directory-files-and-attributes directory nil nil nil))
+      (let* ((path (car element))
+             (isdir (car (cdr element)))
+             (ignore (or (string= path ".") (string= path ".."))))
+        (if (and (eq isdir t) (not ignore))
+            (let ((dir (concat directory "/" path)))
+              (setq subdirs (append (cons dir subdirs)
+                                    (recursive-subdirs dir)))))))
+    (if (not (eq withroot nil))
+        (add-to-list 'subdirs directory))
+subdirs))
 
-;; Show-paren-mode settings
-(show-paren-mode t) ;; включить выделение выражений между {},[],()
-(setq show-paren-style 'expression) ;; выделить цветом выражения между {},[],()
-
-;; Electric-modes settings
-(electric-pair-mode    1) ;; автозакрытие {},[],() с переводом курсора внутрь скобок
-(electric-indent-mode -1) ;; отключить индентацию  electric-indent-mod'ом (default in Emacs-24.4)
-
-;; Disable GUI components
-(tooltip-mode      -1)
-(menu-bar-mode      1) ;; отключаем графическое меню
-(tool-bar-mode     -1) ;; отключаем tool-bar
-(if (system-is-windows)
-  (scroll-bar-mode   -1) ;; отключаем полосу прокрутки
-  )
-(blink-cursor-mode -1) ;; курсор не мигает
-(setq use-dialog-box     nil) ;; никаких графических диалогов и окон - все через минибуфер
-(setq redisplay-dont-pause t)  ;; лучшая отрисовка буфера
-(setq ring-bell-function 'ignore) ;; отключить звуковой сигнал
-
-;; Linum plugin
-(require 'linum) ;; вызвать Linum
-(line-number-mode   t) ;; показать номер строки в mode-line
-(global-linum-mode  t) ;; показывать номера строк во всех буферах
-(column-number-mode t) ;; показать номер столбца в mode-line
-(setq linum-format " %d") ;; задаем формат нумерации строк
+(dolist (dir (recursive-subdirs "~/.emacs.d/config-files" t))
+  (dolist (file (directory-files dir t "\.el$" nil))
+    (load (file-name-sans-extension file))))
 
 
-;; Fringe settings
-(when (system-is-windows)
-  (fringe-mode '(8 . 0)) ;; органичиталь текста только слева
-  (setq-default indicate-empty-lines t) ;; отсутствие строки выделить глифами рядом с полосой с номером строки
-  (setq-default indicate-buffer-boundaries 'left) ;; индикация только слева
-  )
+;;(add-to-list 'load-path "~/.emacs.d/config-files/")
+;;(require 'init-autocomplete.el)
+;;(require 'init-bookmarks.el)
+;;(require 'init-buffers.el)
+;;(require 'init-clipboard.el)
+;;(require 'init-color-theme.el)
+;;(require 'init-editing.el)
+;;(require 'init-electric-mode.el)
+;;(require 'init-export.el)
+;;(require 'init-fringe.el)
+;;(require 'init-gui.el)
+;;(require 'init-ido-plugin.el)
+;;(require 'init-imenu.el)
+;;(require 'init-indent.el)
+;;(require 'init-linum-plugin.el)
+;;(require 'init-markdown.el)
+;;(require 'init-mode-line.el)
+;;(require 'init-neotree.el)
+;;(require 'init-org-mode.el)
+;;(require 'init-parent-mode.el)
+;;(require 'init-python-mode.el)
+;;(require 'init-scrolling.el)
+;;(require 'init-search.el)
+;;(require 'init-splash-screen.el)
+;;(require 'init-syntax-highlighting.el)
 
-;; Display file size/time in mode-line
-(setq display-time-24hr-format t) ;; 24-часовой временной формат в mode-line
-(display-time-mode             t) ;; показывать часы в mode-line
-(size-indication-mode          t) ;; размер файла в %-ах
-
-
-;; Line wrapping
-(setq word-wrap          t) ;; переносить по словам
-(global-visual-line-mode t)
-
-;; Start window size
-(when (window-system)
-    (set-frame-size (selected-frame) 140 50))
-
-;; IDO plugin
-(require 'ido)
-(ido-mode                      t)
-(icomplete-mode                t)
-(ido-everywhere                t)
-(setq ido-vitrual-buffers      t)
-(setq ido-enable-flex-matching t)
-
-;; Buffer Selection and ibuffer settings
-(require 'bs)
-(require 'ibuffer)
-(defalias 'list-buffers 'ibuffer) ;; отдельный список буферов при нажатии C-x C-b
-(global-set-key (kbd "<f2>") 'bs-show) ;; запуск buffer selection кнопкой F2
-
-;; Color-theme definition <http://www.emacswiki.org/emacs/ColorTheme>
-(defun color-theme-init()
-    (require 'color-theme)
-    (color-theme-initialize)
-    (setq color-theme-is-global t)
-    (color-theme-charcoal-black))
-(if (system-is-windows)
-    (when (file-directory-p win-init-ct-path)
-        (add-to-list 'load-path win-init-ct-path)
-        (color-theme-init))
-    (when (file-directory-p unix-init-ct-path)
-        (add-to-list 'load-path unix-init-ct-path)
-        (color-theme-init)))
-
-;; Syntax highlighting
-(require 'font-lock)
-(global-font-lock-mode             t) ;; включено с версии Emacs-22. На всякий...
-(setq font-lock-maximum-decoration t)
-
-;; Indent settings
-(setq-default indent-tabs-mode nil) ;; отключить возможность ставить отступы TAB'ом
-(setq-default tab-width          4) ;; ширина табуляции - 4 пробельных символа
-(setq-default c-basic-offset     4)
-(setq-default standart-indent    4) ;; стандартная ширина отступа - 4 пробельных символа
-(setq-default lisp-body-indent   4) ;; сдвигать Lisp-выражения на 4 пробельных символа
-(global-set-key (kbd "RET") 'newline-and-indent) ;; при нажатии Enter перевести каретку и сделать отступ
-(setq lisp-indent-function  'common-lisp-indent-function)
-
-;; Scrolling settings
-(setq scroll-step               1) ;; вверх-вниз по 1 строке
-(setq scroll-margin            10) ;; сдвигать буфер верх/вниз когда курсор в 10 шагах от верхней/нижней границы
-(setq scroll-conservatively 10000)
 
 ;; Short messages
 (defalias 'yes-or-no-p 'y-or-n-p)
-
-;; Clipboard settings
-(setq x-select-enable-clipboard t)
-
-;; End of file newlines
-(setq require-final-newline    t) ;; добавить новую пустую строку в конец файла при сохранении
-(setq next-line-add-newlines nil) ;; не добавлять новую строку в конец при смещении
-                                    ;; курсора  стрелками
-
-;; Highlight search resaults
-(setq search-highlight        t)
-(setq query-replace-highlight t)
-
-;; Easy transition between buffers: M-arrow-keys
-(if (equal nil (equal major-mode 'org-mode))
-    (windmove-default-keybindings 'meta))
-
-;; Delete trailing whitespaces, format buffer and untabify when save buffer
-(defun format-current-buffer()
-    (indent-region (point-min) (point-max)))
-(defun untabify-current-buffer()
-    (if (not indent-tabs-mode)
-        (untabify (point-min) (point-max)))
-    nil)
-;;(add-to-list 'write-file-functions 'format-current-buffer) ;; WARN: brokes saving file!!!
-(global-set-key (kbd "C-c f") (lambda () (interactive) (format-current-buffer)))
-;;(global-set-key (kbd "C-c C-f") (lambda () (interactive) (format-current-buffer)))
-;;(global-set-key (kbd "C-с а") (lambda () (interactive) (format-current-buffer))) ;; rus letter
-(add-to-list 'write-file-functions 'untabify-current-buffer)
-(add-to-list 'write-file-functions 'delete-trailing-whitespace)
-
-
-;; Auto-complete plugin <http://www.emacswiki.org/emacs/AutoComplete>
-(defun ac-init()
-    (require 'auto-complete-config)
-    (ac-config-default)
-    (if (system-is-windows)
-        (add-to-list 'ac-dictionary-directories win-init-ac-dict-path)
-        (add-to-list 'ac-dictionary-directories unix-init-ac-dict-path))
-    (setq ac-auto-start        t)
-    (setq ac-auto-show-menu    t)
-    (global-auto-complete-mode t)
-    (add-to-list 'ac-modes   'lisp-mode)
-    (add-to-list 'ac-sources 'ac-source-semantic) ;; искать автодополнения в CEDET
-    (add-to-list 'ac-sources 'ac-source-variables) ;; среди переменных
-    (add-to-list 'ac-sources 'ac-source-functions) ;; в названиях функций
-    (add-to-list 'ac-sources 'ac-source-dictionary) ;; в той папке где редактируемый буфер
-    (add-to-list 'ac-sources 'ac-source-words-in-all-buffer) ;; по всему буферу
-    (add-to-list 'ac-sources 'ac-source-files-in-current-dir))
-(if (system-is-windows)
-    (when (file-directory-p win-init-ac-path)
-        (add-to-list 'load-path win-init-ac-path)
-        (ac-init))
-    (when (file-directory-p unix-init-ac-path)
-        (add-to-list 'load-path unix-init-ac-path)
-        (ac-init)))
-
-;; Bookmark settings
-(require 'bookmark)
-(setq bookmark-save-flag t) ;; автоматически сохранять закладки в файл
-(when (file-exists-p (concat user-emacs-directory "bookmarks"))
-    (bookmark-load bookmark-default-file t)) ;; попытаться найти и открыть файл с закладками
-(global-set-key (kbd "<f3>") 'bookmark-set) ;; создать закладку по F3
-(global-set-key (kbd "<f4>") 'bookmark-jump) ;; прыгнуть на закладку по F4
-(global-set-key (kbd "<f5>") 'bookmark-bmenu-list) ;; открыть список закладок
-(setq bookmark-default-file (concat user-emacs-directory "bookmarks")) ;; хранить закладки в файл bookmarks в .emacs.d
-
-
-;; set theme
-;(load-theme 'tangotango t)
-(load-theme 'darktooth t)
-
-;; powerline
-;(require 'powerline)
-;(powerline-default-theme)
-
-;; telephone-line
-(require 'telephone-line)
-(telephone-line-mode 1)
-
-;; anaconda-mode for python buffer
-;; https://github.com/proofit404/anaconda-mode
-(add-hook 'python-mode-hook 'anaconda-mode)
-;; and add eldoc
-(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
-
 
 ;; enable which-key mode
 ;;https://github.com/justbur/emacs-which-key
@@ -275,82 +116,9 @@
   :config
   (reverse-im-activate "russian-computer"))
 
-;; hide special chars for text highlightening
-(set 'org-hide-emphasis-markers t)
-
-;; enable line highlight in org-mode tables
-;; from https://emacs.stackexchange.com/questions/29501/automatically-turn-on-hl-line-mode-inside-org-mode-tables
-(defun highlight-current-table-line ()
-  (interactive)
-  (if (org-at-table-p)
-      (hl-line-mode 1)
-    (hl-line-mode -1)))
-(defun setup-table-highlighting ()
-  (add-hook 'post-command-hook #'highlight-current-table-line nil t))
-(add-hook 'org-mode-hook #'setup-table-highlighting)
-(add-hook 'orgtbl-mode-hook #'setup-table-highlighting)
-
-
-;; https://github.com/magnars/multiple-cursors.el
-(require 'multiple-cursors)
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-
-;; neotree
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
-
-;;export to odt
-(when (system-is-windows)
-  (if (file-exists-p "\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\"")
-    (setq org-export-odt-convert-processes
-        "\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\" --headless --convert-to %f%x --outdir %d %i"
-        org-export-odt-preferred-output-format "odt"
-        org-export-odt-convert-process "\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\"")
-  (message "SOFFICE path not found")))
-
-;; insert date
-(global-set-key (kbd "C-c d") 'insert-standard-date)
-(global-set-key (kbd "C-c C-c d") 'insert-date)
-(defun insert-date (prefix)
-    "Insert the current date. With prefix-argument, use ISO format. With
-   two prefix arguments, write out the day and month name."
-    (interactive "P")
-    (let ((format (cond
-                   ((not prefix) "%d.%m.%Y")
-                   ((equal prefix '(4)) "%Y-%m-%d")
-                   ((equal prefix '(16)) "%A, %d. %B %Y")))
-          (system-time-locale "de_DE"))
-      (insert (format-time-string format))))
-(defun insert-date (format)
-    "Wrapper around format-time-string."
-    (interactive "MFormat: ")
-    (insert (format-time-string format)))
-(defun insert-standard-date ()
-    "Inserts standard date time string."
-    (interactive)
-    (insert (format-time-string "%F %T")))
-
-;; changed emphasis - org-mode look
-(setq org-emphasis-alist
-  '(("*" (bold :foreground "Orange" ))
-    ("/" italic)
-    ("_" underline)
-    ("=" (:background "maroon" :foreground "white"))
-    ;;("~" (:background "deep sky blue" :foreground "MidnightBlue"))
-    ("~" (bold :background "#F3D3B4" :foreground "#965F28"))
-    ("+" (:strike-through t))))
-
-
-;; Markdown mode
-(use-package markdown-mode
-  :ensure t
-  :mode (("README\\.md\\'" . gfm-mode)
-         ("\\.md\\'" . markdown-mode)
-         ("\\.markdown\\'" . markdown-mode))
-  :init (setq markdown-command "multimarkdown"))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; AUTOGENERATED BELOW
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -436,17 +204,3 @@ static char *gnus-pointer[] = {
  '(weechat-color-list
    (quote
     (unspecified "#272822" "#3C3D37" "#F70057" "#F92672" "#86C30D" "#A6E22E" "#BEB244" "#E6DB74" "#40CAE4" "#66D9EF" "#FB35EA" "#FD5FF0" "#74DBCD" "#A1EFE4" "#F8F8F2" "#F8F8F0"))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(org-document-title ((t (:foreground "#3FD7E5" :weight bold :height 1.7))))
- '(org-level-1 ((t (:foreground "#FE8019" :height 1.8))))
- '(org-level-2 ((t (:foreground "OliveDrab4" :height 1.6))))
- '(org-level-3 ((t (:foreground "#83A598" :height 1.5))))
- '(org-level-4 ((t (:foreground "#FABD2F" :height 1.4))))
- '(org-level-5 ((t (:foreground "#427B58" :height 1.3))))
- '(org-level-6 ((t (:foreground "#B8BB26" :height 1.2))))
- '(org-level-7 ((t (:foreground "#FB4933" :height 1.2))))
- '(org-level-8 ((t (:foreground "#83A598" :height 1.1)))))
