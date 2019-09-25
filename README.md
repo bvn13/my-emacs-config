@@ -81,6 +81,17 @@ __in progress__
 10. `M-S-UP` - kill the current row or horizontal line
 11. `M-S-DOWN` - insert new row above the current row
 
+#### Diff
+
+There is a possibility to compare two regions.
+
+1. Select first region
+2. `C-c C-d s` - start diff
+3. Select second region
+4. `C-c C-d e` - end diff -> it shows a diff of two regions selected before in separate buffer
+
+You can easily abort diff with `C-c C-d x`
+
 ## Features
 
 ### OS Shell
