@@ -47,6 +47,10 @@
         (set-buffer buf)
         (erase-buffer))
       (append-to-buffer buf (car tmp) (cadr tmp))))
+
+  ;; deactivate mark region
+  (deactivate-mark)
+
   (message "Now select other region to compare and run `diff-region-compare-with-b`"))
 
 (defun diff-region-compare-with-b ()
@@ -64,7 +68,9 @@
         ;;  save current content as file B
         (when fb
           (setq tmp (diff-region-format-region-boundary (region-beginning) (region-end)))
-          (write-region (car tmp) (cadr tmp) fb))
+          (write-region (car tmp) (cadr tmp) fb)
+          ;; deactivate mark region
+          (deactivate-mark))
 
         (setq rlt-buf (get-buffer-create "*Diff-region-output*"))
         (when (and fa (file-exists-p fa) fb (file-exists-p fb))
@@ -95,4 +101,10 @@
             (delete-file fa))
         (if (and fb (file-exists-p fb))
             (delete-file fb)))
+
     (message "Please select region at first!")))
+
+
+(global-set-key (kbd "C-c C-d s") 'diff-region-tag-selected-as-a)
+(global-set-key (kbd "C-c C-d e") 'diff-region-compare-with-b)
+(global-set-key (kbd "C-c C-d x") 'diff-region-exit)
