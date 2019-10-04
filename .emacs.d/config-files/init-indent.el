@@ -6,6 +6,3 @@
 (setq-default lisp-body-indent   4) ;; сдвигать Lisp-выражения на 4 пробельных символа
 (global-set-key (kbd "RET") 'newline-and-indent) ;; при нажатии Enter перевести каретку и сделать отступ
 (setq lisp-indent-function  'common-lisp-indent-function)
-
-;; autoindent
-(add-to-list 'load-path "~/.emacs.d/config-files/")
