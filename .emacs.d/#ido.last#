@@ -1,0 +1,262 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/bvn13/.config/" . "sway/")
+ ("/home/bvn13/develop/mila-clinic/appointment/" . "docs/")
+ ("/home/bvn13/develop/mila-clinic/" . "appointment/")
+ ("/home/bvn13/develop/_examples/JavaLessons/" . "springboot2-request-logger/")
+ ("/home/bvn13/develop/_examples/" . "JavaLessons/")
+ ("/home/" . "bvn13/")
+ ("/home/bvn13/develop/SpringBlog/src/main/java/com/raysmond/blog/" . "utils/")
+ ("/home/bvn13/develop/SpringBlog/src/main/java/com/raysmond/" . "blog/")
+ ("/home/bvn13/develop/SpringBlog/src/main/java/com/" . "raysmond/")
+ ("/home/bvn13/develop/SpringBlog/src/main/java/" . "com/")
+ ("/home/bvn13/develop/SpringBlog/src/main/" . "java/")
+ ("/home/bvn13/cloud/yadisk/projects/amo-1c/" . "start-2019-08-05/")
+ ("/home/bvn13/cloud/yadisk/projects/" . "amo-1c/")
+ ("/home/bvn13/cloud/yadisk/" . "projects/")
+ ("/home/bvn13/cloud/" . "yadisk/")
+ ("/home/bvn13/develop/_config/" . "sync/")
+ ("/home/bvn13/Documents/notes/projects/" . "weborg/")
+ ("/home/bvn13/Documents/notes/java/" . "encryption/")
+ ("/home/bvn13/Documents/notes/" . "postgresql/")
+ ("/home/bvn13/develop/_contrib/fingerprint/Validity90/" . "prototype/")
+ ("/home/bvn13/develop/_contrib/fingerprint/" . "Validity90/")
+ ("/home/bvn13/develop/_contrib/" . "fingerprint/")
+ ("/home/bvn13/Documents/" . "notes/")
+ ("/home/bvn13/.local/share/" . "applications/")
+ ("/home/bvn13/.local/" . "share/")
+ ("/home/bvn13/develop/kb-layout-caps-led/" . "daemons/")
+ ("/home/bvn13/" . "develop/")
+ ("/home/bvn13/develop/PriceProcessorHG/src/main/java/ru/bvn13/priceprocessor/" . "utils/")
+ ("/home/bvn13/develop/PriceProcessorHG/src/main/java/ru/bvn13/" . "priceprocessor/")
+ ("/home/bvn13/develop/PriceProcessorHG/src/main/java/ru/" . "bvn13/")
+ ("/home/bvn13/develop/PriceProcessorHG/src/main/java/" . "ru/")
+ ("/home/bvn13/develop/PriceProcessorHG/src/main/" . "java/")
+ ("/home/bvn13/develop/PriceProcessorHG/src/" . "main/")
+ ("/home/bvn13/develop/PriceProcessorHG/" . "src/")
+ ("/home/bvn13/develop/" . "mila-clinic/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/bvn13/"
+ "/home/bvn13/.config/sway/"
+ "/home/bvn13/develop/mila-clinic/appointment/docs/"
+ "/home/bvn13/soft/idea-IU/bin/"
+ "/home/bvn13/develop/_examples/JavaLessons/springboot2-request-logger/"
+ "/home/bvn13/Documents/notes/network/"
+ "/home/bvn13/Documents/notes/postgresql/"
+ "/home/bvn13/develop/SpringBlog/src/main/java/com/raysmond/blog/services/"
+ "/home/bvn13/develop/SpringBlog/src/main/java/com/raysmond/blog/models/"
+ "/home/bvn13/soft/idea-IU-191.7479.19/bin/"
+ "/home/bvn13/temp/"
+ "/home/bvn13/Documents/notes/github/"
+ "/home/bvn13/Documents/notes/letsencrypt/"
+ "/home/bvn13/cloud/yadisk/projects/amo-1c/start-2019-08-05/"
+ "/home/bvn13/develop/_config/sync/"
+ "/home/bvn13/Documents/notes/api/"
+ "/home/bvn13/Documents/notes/projects/weborg/"
+ "/home/bvn13/Documents/notes/emacs/"
+ "/home/bvn13/Documents/"
+ "/home/bvn13/.emacs.d/"
+ "/home/bvn13/Documents/notes/java/encryption/"
+ "/home/bvn13/Documents/notes/java/"
+ "/home/bvn13/develop/_contrib/fingerprint/Validity90/prototype/"
+ "/home/bvn13/develop/_contrib/fingerprint/"
+ "/home/bvn13/Documents/DIY/"
+ "/home/bvn13/develop/ParkerSquare/"
+ "/home/bvn13/develop/trollobot/"
+ "/home/bvn13/.steam/steam/steamapps/common/Left 4 Dead 2/left4dead2/cfg/"
+ "/home/bvn13/develop/Shooter2D/"
+ "/home/bvn13/.local/share/applications/"
+ "/home/bvn13/develop/kb-layout-caps-led/daemons/"
+ "/home/bvn13/develop/kb-layout-caps-led/scripts/"
+ "/home/bvn13/develop/kb-layout-caps-led/"
+ "/home/bvn13/develop/kb-layout-caps-led/draft/"
+ "/home/bvn13/games/minetest/games/mineclone-2/"
+ "/home/bvn13/develop/PriceProcessorHG/src/main/java/ru/bvn13/priceprocessor/utils/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ ".zshrc"
+ "config"
+ "appointments.org"
+ "idea.vmoptions"
+ "idea.vmoptions.cracked"
+ "README.md"
+ "ipv6.org"
+ "pg-database-init.org"
+ "UserService.java"
+ "User.java"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/bvn13/" (24083 51594 803572 19000) "pgadmin4/" ".zshrc" ".dbus/" "temp/" ".groovy/" "Library/" ".dotnet/" "Documents/" ".steam/" "_note/" ".markdownNavigator/" ".selected_editor" ".jackdrc" ".var/" ".audacity-data/" "accessories/" ".pgadmin3" "games/" ".yarnrc" ".gnutls/" "Music/" "develop/" ".gnome/" ".python_history" ".esd_auth" ".IntelliJIdea2019.2/" "Dropbox/" "powertop.html" "../" "openvpn/" "cloud/" ".pgadmin_histoqueries" ".bash_logout" ".dropbox-dist/" ".steampid" "hs_err_pid31227.log" ".ICEauthority" ".httpie/" "pgadmin.log" ".dia/" ".gnome2/" ".babel.json" ".icons/" ".weechat/" "pgadmin4.sh" ".wget-hsts" ".persepolis/" ".eteks/" ".ssr/" ".sbt/" "qphotorec.log" ".pgpass" ".native-image/" ".cert/" ".node-gyp/" ".zcompdump" "compile/" ".idea-build/" ".ssh/" ".cups/" ".config/" ".gitconfig" ".gdxsetup" ".3T/" "./" ".npm/" ".esmtp_queue/" ".xonotic/" "testdisk.log" ".teeworlds/" ".darkplaces/" ".java/" ".bashrc" ".bash_profile~" ".jmonkeyplatform/" ".pki/" ".bashrc~" "Templates/" ".mozilla/" ".install4j" ".soapuios/" "Recordings/" ".cache/" ".bash_profile" ".dosbox/" ".gnupg/" ".electron-gyp/" ".histfile" "test/" "job/" ".hgrc" ".IntelliJIdea2019.3/" ".ViberPC/" "hs_err_pid27414.log" "Downloads/" "install/" ".steampath" "testdisk.log~" "Desktop/" ".oracle_jre_usage/" "Pictures/" ".gdxtexturepackergui/" "daemons/" ".gnome2_private/" ".zshrc~" ".zsh/" ".scala_history" ".dropbox/" ".swt/" ".ivy2/" ".putty/" ".jmonkeyplatform-installer/" ".gradle/" ".hedgewars/" "soft/" ".android/" "Videos/" ".local/" "hs_err_pid30718.log" ".yo-rc-global.json" "pgadmin4.sh~" ".v8flags.6.8.275.32-node.45.94bb3d765d14aed793e4821978ce3470.json" ".bash_history" ".thumbnails/" ".emacs.d/" "coverage-error.log" ".xsel.log" ".m2/" ".shutter/" ".PlayOnLinux/" "Public/" ".wine/" "Diagram1.dia.autosave")
+
+ ("/home/bvn13/.config/" (24083 47529 685312 449000) "smtube/" "nautilus/" "vivaldi/" "pulse/" "persepolis_download_manager/" "green-recorder/" "sqlitebrowser/" "configstore/" "discord/" "QtProject.conf" "filezilla/" "generator-jhipster-nodejs/" "rofi/" "mypaint/" "omf/" "dconf/" "../" "gconf/" "freerdp/" "i3/" "gnome-session/" "chromium/" "terminator/" "fontconfig/" "libvirt/" "mc/" "mpv/" "mimeapps.list" "ardour5/" "libreoffice/" "yelp/" "fragments/" "smplayer/" "lutris/" "user-dirs.dirs" "gedit/" "insight-nodejs/" "rclone/" "goa-1.0/" "gnome-initial-setup-done" "gtk-3.0/" "dleyna-server-service.conf" "ExpanDrive/" "./" "opera/" "user-dirs.locale" "google-chrome/" "cef_user_data/" "Dharkael/" "corebird/" "enchant/" "autostart/" "gnome-initial-setup-done-old" "Google Play Music Desktop Player/" "wireshark/" "transmission-remote-gtk/" "hexchat/" "inkscape/" "scummvm/" "diffuse/" "dleyna-renderer-service.conf" "htop/" "fish/" "pulse-old/" "GIMP/" "menus/" "epiphany/" "transmission/" "systemd/" "gnome-control-center/" "sublime-text-3/" "gtk-4.0/" "Trolltech.conf" "eog/" "ibus/" "eiskaltdc++/" "yandex-disk/" "gtk-2.0/" "abrt/" "sway/" "gnome-boxes/" "remmina/" "vlc/" "unity3d/" "keepassxc/" "easytag/" "gnote/" "copyq/" "evolution/" "totem/")
+
+ ("/home/bvn13/.config/fish/" (24061 11901 444025 842000) "fish_variables~" "fish_variables" "../" "functions/" "conf.d/" "config.fish" "./" "config.fish~")
+
+ ("/home/bvn13/.config/fish/functions/" (23997 25373 556205 312000) "variables.fish" "../" "fish_prompt.fish" "idea.fidh~" "./" "xclip.fish" "idea.fish" "idea.fish~" "mc.fish" "mc.fish~")
+
+ ("/home/bvn13/.config/sway/" (23988 22373 157700 0) "config" "../" "config~" "./")
+
+ ("/home/bvn13/develop/" (23984 41829 703011 287000) "test-gradle/" "ircbot4s/" "PriceProcessorHG/" "imdb-spider/" "ParkerSquare/" "../" "_contrib/" "necro/" "_scripts/" "mila-clinic.tar.gz" "spring-beans/" "ADaStor/" "sync-diff/" "instabot/" "EncryptedPreferences/" "kb-layout-caps-led/" "_config/" "JProxy/" "_school/" "Shooter2D/" "./" "JIrcBot/" "test/" "_entry_exams/" "trollobot/" "SpringBlog/" "instagram4j/" "obrazfodo/" "mila-clinic/" "instagram4scala/" "jmonad/" "_examples/" "springinputstream/" "_thirdparty/")
+
+ ("/home/bvn13/develop/mila-clinic/" (23987 26409 798852 918000) "build.gradle.bup" "gradlew" "accessories/" "gradlew.bat" "../" "database-diagram/" "mc-common/" "HELP.md" "gradle/" "mc-persistence/" "milaclinic.ipr" ".idea/" "mc-appointments/" ".git/" "dataSources/" ".gitignore" "./" "drafts/" "milaclinic.iws" "settings.gradle" ".gradle/" "build.gradle" ".ideaDataSources/" "mila-clinic.iml" "docs/")
+
+ ("/home/bvn13/develop/mila-clinic/docs/" (23988 18390 901940 386000) "appointments.org" "photo_2019-09-13_23-23-27.jpg" "../" "./")
+
+ ("/home/bvn13/develop/mila-clinic/appointment/docs/" (23963 41299 96467 364000) "appointments.org" "photo_2019-09-13_23-23-27.jpg" "../" "./")
+
+ ("/home/bvn13/develop/mila-clinic/appointment/" (23979 1375 647978 972000) "gradlew" "accessories/" "src/" "gradlew.bat" "../" "database-diagram/" "HELP.md" "gradle/" "appointment.ipr" "dataSources/" "logs/" ".gitignore" "./" "appointment.iws" "drafts/" "appointment.iml" "settings.gradle" "appointment.main.iml" "appointment.test.iml" ".gradle/" "build.gradle" "build/" ".ideaDataSources/" "docs/")
+
+ ("/home/bvn13/Documents/notes/java/" (23942 24910 896720 859000) "../" "spring/" "./" "encryption/" "apache-camel/")
+
+ ("/home/bvn13/.emacs.d/" (23963 36116 785046 185000) "anaconda-mode/" "../" "session.10e01fe296430d745156614399423879100000019820101" "url/" "auto-save-list/" "elpa/" "config-files/" "./" "ido.last~" "init.el" "ido.last")
+
+ ("/home/bvn13/Documents/" (23943 15539 333822 543000) "books/" "../" "moex/" "./" "DIY/" "job/" "notes/" "installation/" "ViberDownloads/")
+
+ ("/home/bvn13/Documents/notes/network/" (23942 24874 654498 633000) "ipv6.org~" "../" "ipv6.org" "./")
+
+ ("/home/bvn13/develop/_examples/JavaLessons/springboot2-request-logger/" (23954 28965 777596 940000) "gradlew" "springboot2-request-logger.ipr" "src/" "gradlew.bat" "../" "HELP.md" "gradle/" "springboot2-request-logger.iml" ".gitignore" "springboot2-request-logger.test.iml" "./" "springboot2-request-logger.iws" "img/" "settings.gradle" "README.md" ".gradle/" "build.gradle" "build/" "springboot2-request-logger.main.iml")
+
+ ("/home/bvn13/soft/idea-IU/bin/" (23954 30376 762593 625000) "fsnotifier" "inspect.sh" "idea.sh" "log.xml" "idea.vmoptions" "libdbm64.so" "idea.properties" "fsnotifier64" "idea.vmoptions.cracked" "idea.svg" "../" "printenv.py" "idea.vmoptions.orig" "idea64.vmoptions.cracked" "idea.vmoptions~" "idea64.vmoptions" "./" "idea64.vmoptions.orig" "fsnotifier-arm" "appletviewer.policy" "format.sh" "idea64.vmoptions~" "idea.png" "restart.py")
+
+ ("/home/bvn13/develop/_examples/JavaLessons/" (23954 26820 479908 515000) "../" "LICENSE" "recursion-print/" "springboot2-request-logger/" ".git/" "spring-custom-scheduler/" ".gitignore" "./" "encryption/" "springboot2-junit5-skiptest/" "README.md" "time-duration/")
+
+ ("/home/bvn13/develop/_examples/" (23869 60518 325609 744000) "../" "./" "JavaLessons/")
+
+ ("/home/bvn13/.local/share/applications/" (23896 63661 645328 204000) "gog_com-Duke_Nukem_3D_Atomic_Edition_3.desktop" "chrome-blpcfgokakmgnkcojhhkbfbldkacnbeo-Default.desktop" "gog_com-Duke_Nukem_3D_Atomic_Edition_2.desktop" "../" "mimeinfo.cache" "chrome-aohghmighlieiainnegkcijnfilokake-Default.desktop" "mimeapps.list" "discord.desktop" "gog_com-Duke_Nukem_3D_Atomic_Edition_5.desktop" "userapp-Firefox-R33IZZ.desktop~" "gog_com-Duke_Nukem_3D_Atomic_Edition_1.desktop" "gdx-texturepacker.desktop" "chrome-apdfllckaahabafndbhieahigkjlhalf-Default.desktop" "./" "gog_com-Duke_Nukem_3D_Atomic_Edition_4.desktop" "userapp-Firefox-R33IZZ.desktop" "jetbrains-idea.desktop" "SoapUI-5.5.0-0.desktop" "org.baedert.corebird.desktop" "jetbrains-idea.desktop~" "gdx-texturepacker.desktop~" "org.baedert.corebird.desktop~" "Studio 3T Linux-0.desktop")
+
+ ("/home/bvn13/cloud/yadisk/projects/amo-1c/start-2019-08-05/" (23896 13686 627869 330000) "../" "Интеграция списков AmoCRM в 1С.org" "./" "Интеграция списков AmoCRM в 1С.odt" "Интеграция списков AmoCRM в 1С.org~")
+
+ ("/home/bvn13/temp/" (23905 32176 202814 526000) "Ставрополь, Ростов.zip" "boot.log" "bad-table.org~" "../" "1.png" "./" "prices/" "Второй файл.txt" "duck-search-test.html" "test/" "TarsosDSP-nightly.jar" "bad-table.org" "log.log" "Файл с русскими буквами в назввании.zip")
+
+ ("/home/bvn13/Documents/notes/postgresql/" (23910 56079 302085 561000) "../" "./" "pg-backup-restore.org" "pg-backup-restore.org~" "pg-database-init.org" "pg-database-init.org~")
+
+ ("/home/bvn13/Documents/notes/" (23897 1736 440032 283000) "github/" "publications/" "architecture/" "java/" "../" "LICENSE" "windows/" ".git/" "links/" "projects/" "itc/" ".gitignore" "./" "job/" "postgresql/" "adblock/" "emacs/" "interview/" "api/" "letsencrypt/")
+
+ ("/home/" (23753 53272 247134 85000) "../" "./" "test/" "bvn13/")
+
+ ("/home/bvn13/develop/SpringBlog/" (23910 55552 708952 792000) "SpringBlog.iws" "gradlew" "src/" "SpringBlog.iml" "gradlew.bat" "../" "LICENSE" "gradle/" ".bowerrc" ".git/" "releases/" "SpringBlog.test.iml" "SpringBlog.ipr" ".gitignore" "docker-compose.yml" "./" "SpringBlog.main.iml" "settings.gradle" "bower.json" "SpringBlog-2.9.3" "README.md" ".gradle/" "build.gradle" "build/")
+
+ ("/home/bvn13/develop/SpringBlog/src/" (23883 11649 508452 109000) "../" "main/" "./")
+
+ ("/home/bvn13/develop/SpringBlog/src/main/java/com/raysmond/blog/utils/" (23883 11649 524452 207000) "../" "CommonHelper.java" "DTOUtil.java" "./" "PaginatorUtil.java")
+
+ ("/home/bvn13/develop/SpringBlog/src/main/java/com/raysmond/blog/services/" (23886 48299 279171 156000) "CacheSettingService.java" "SeoRobotAgentService.java" "../" "TelegramBotSettings.java" "TagService.java" "SettingService.java" "AppSetting.java" "UserService.java" "StatisticsService.java" "AdsConfig.java" "./" "LikeService.java" "VisitService.java" "FileStorageService.java" "PostService.java" "SeoService.java" "RequestProcessorService.java")
+
+ ("/home/bvn13/develop/SpringBlog/src/main/java/com/raysmond/blog/models/" (23886 46981 561394 96000) "Post.java" "dto/" "../" "Setting.java" "Visit.java" "User.java" "Like.java" "./" "Tag.java" "SeoPostData.java" "BaseModel.java" "support/" "StoredFile.java" "SeoRobotAgent.java")
+
+ ("/home/bvn13/develop/SpringBlog/src/main/java/com/raysmond/blog/" (23883 11649 524452 207000) "utils/" "Constants.java" "models/" "../" "Application.java" "SecurityConfig.java" "repositories/" "error/" "./" "support/" "notificators/" "controllers/" "forms/" "JpaConfig.java" "WebConfig.java" "services/" "admin/" "seo/")
+
+ ("/home/bvn13/develop/SpringBlog/src/main/java/com/raysmond/" (23883 11649 508452 109000) "../" "blog/" "./")
+
+ ("/home/bvn13/develop/SpringBlog/src/main/java/com/" (23883 11649 508452 109000) "../" "./" "raysmond/")
+
+ ("/home/bvn13/develop/SpringBlog/src/main/java/" (23883 11649 508452 109000) "../" "com/" "./")
+
+ ("/home/bvn13/develop/SpringBlog/src/main/" (23883 11649 525452 213000) "java/" "../" "./" "resources/")
+
+ ("/home/bvn13/develop/SpringBlog/src/main/resources/" (23908 13081 56728 587000) "../" "application-production.yml" "queries/" "./" "templates/" "static/" "application-mysql.yml" "application.yml" "i18n/" "logback.xml" "resources/")
+
+ ("/home/bvn13/soft/idea-IU-191.7479.19/bin/" (23896 63276 168019 275000) "fsnotifier" "inspect.sh" "idea.sh" "log.xml" "idea.vmoptions" "libdbm64.so" "idea.properties" "fsnotifier64" "idea.vmoptions.cracked" "idea.svg" "../" "printenv.py" "idea64.vmoptions.cracked" "idea.vmoptions~" "idea64.vmoptions" "./" "fsnotifier-arm" "appletviewer.policy" "format.sh" "idea64.vmoptions~" "idea.png" "restart.py")
+
+ ("/home/bvn13/Documents/notes/letsencrypt/" (23886 44215 415977 712000) "../" "manual.org~" "./" "manual.org")
+
+ ("/home/bvn13/Documents/notes/github/" (23886 48916 324820 5000) "../" "синхронизация-форка.org~" "./" "синхронизация-форка.org")
+
+ ("/home/bvn13/develop/trollobot/" (23883 9286 509204 996000) "node_modules/" "../" "package-lock.json" "./" "gaybot.js~" "gaybot.js")
+
+ ("/home/bvn13/develop/_config/sync/" (23880 24751 117156 246000) "sync.py" "../" "sync-cloud.timer" "#sync.py#" "sync-cloud.sh" "./" "cloud-local" "sync-cloud.service" "local-cloud")
+
+ ("/home/bvn13/cloud/yadisk/projects/amo-1c/" (23880 28544 835512 78000) "../" "start-2019-08-05/" "./")
+
+ ("/home/bvn13/cloud/yadisk/projects/" (23880 28523 869386 140000) "../" "./" "amo-1c/" "test1.7z" "ФОДО Образ/")
+
+ ("/home/bvn13/cloud/yadisk/" (23880 28383 388542 370000) "documents/" "books/" "for-kids/" "../" ".sync/" "keys/" "projects/" "./" "sql/")
+
+ ("/home/bvn13/cloud/" (23878 32248 532211 862000) "../" "onedrive/" "./" "yadisk/")
+
+ ("/home/bvn13/Documents/notes/api/" (23858 53607 261938 532000) "../" "instagram.org~" "./" "instagram.org")
+
+ ("/home/bvn13/develop/_config/" (23877 38445 842416 920000) "ssh-agent/" "../" "sync/" "./" "my-emacs-config/")
+
+ ("/home/bvn13/Documents/notes/projects/weborg/" (23858 49290 324872 965000) "../" "plan.org~" "./" "plan.org")
+
+ ("/home/bvn13/Documents/notes/projects/" (23856 46436 125233 775000) "../" "weborg/" "./")
+
+ ("/home/bvn13/Documents/notes/emacs/" (23855 34826 317297 310000) "шифрование-в-emacs.org" "../" "./" "insert-date-formatted.org~" "insert-date-formatted.org")
+
+ ("/home/bvn13/Documents/notes/java/encryption/" (23855 31322 388954 920000) "../" "./" "gpg-encrypt-decrypt.org" "gpg-encrypt-decrypt.org~")
+
+ ("/home/bvn13/develop/PriceProcessorHG/src/main/java/ru/bvn13/priceprocessor/utils/" (23807 46902 32596 440000) "StackTrace.java" "../" "ExcelReader.java" "DateTimeUtil.java" "./" "zipper/")
+
+ ("/home/bvn13/develop/Shooter2D/" (23777 37267 145006 723000) "core/" "gradlew" "android/" "links.md~" "local.properties" "gradlew.bat" "ios/" "../" "gradle.properties" "scripts/" "gradle/" "links.md" "Shooter2D.ipr" ".idea/" ".git/" "graphics/" ".gitignore" "./" "desktop/" "html/" "drafts/" "settings.gradle" "assets/" "README.md" ".gradle/" "build.gradle" "Shooter2D.iws" "Shooter2D.iml")
+
+ ("/home/bvn13/.steam/steam/steamapps/common/Left 4 Dead 2/left4dead2/cfg/" (23793 34321 911473 42000) "video.txt.bup" "addonconfig.cfg" "joy_preset_4.cfg" "config.cfg" "gpu_mem_level_1_pc.ekv" "gpu_mem_level_2_pc.ekv" "user_default.scr" "listenserver360.cfg" "config_default.cfg" "joy_preset_3.cfg" "../" "moddefaults_mac.txt" "gpu_level_1_pc.ekv" "gpu_level_360.ekv" "cpu_level_2_pc.ekv" "config.360.cfg" "playtest.360.cfg" "video.txt.fixed" "perf.cfg" "mem_level_0_pc.ekv" "splitscreen_on.360.cfg" "splitscreen_off.cfg" "gpu_level_2_pc.ekv" "screenshots_undo.cfg" "cpu_level_360.ekv" "mem_level_1_pc.ekv" "valve.360.rc" "test_start.cfg" "splitscreen_on.cfg" "cpu_level_360_ss.ekv" "test_end.cfg" "cpu_level_1_pc.ekv" "video.txt~" "moddefaults.txt" "modsettings.cfg" "config.global.360.cfg" "gpu_mem_level_0_pc.ekv" "skill1.cfg" "./" "splitscreen_off.360.cfg" "joy_preset_1.cfg" "mem_level_360.ekv" "settings_default.scr" "screenshots.cfg" "joy_preset_2.cfg" "autoexec.360.cfg" "valve.rc" "cpu_level_2_pc_ss.ekv" "cpu_level_0_pc.ekv" "gpu_mem_level_360.ekv" "video.txt" "cpu_level_1_pc_ss.ekv" "mem_level_2_pc.ekv" "360controller.cfg" "listenserver.cfg" "lowend.cfg" "cpu_level_0_pc_ss.ekv" "undo360controller.cfg" "gpu_level_3_pc.ekv" "videodefaults.txt" "gpu_level_0_pc.ekv")
+
+ ("/home/bvn13/develop/ParkerSquare/" (23844 60508 163807 390000) "gradlew" "src/" "gradlew.bat" "../" "HELP.md" "gradle/" "ParkerSquare.ipr" ".git/" "dataSources/" "com.bvn13.math.parkersquare.main.iml" ".gitignore" "./" "com.bvn13.math.parkersquare.iml" "com.bvn13.math.parkersquare.test.iml" "ParkerSquare.iws" "settings.gradle" ".gradle/" "build.gradle" "build/" ".ideaDataSources/" "out/")
+
+ ("/home/bvn13/develop/_contrib/fingerprint/Validity90/prototype/" (23854 9654 964106 39000) "../" "Makefile" "main.c" "logs/" ".gitignore" "./" "test/" "constants.h" "README.md" "validity90/")
+
+ ("/home/bvn13/develop/_contrib/fingerprint/" (23854 15588 927850 459000) "fedora30.inst" "../" "Validity90/" "./" "fedora30.inst~")
+
+ ("/home/bvn13/develop/_contrib/fingerprint/Validity90/" (23854 9382 773448 540000) "spec.md" "log15alt" ".gitmodules" "log11" "../" "dbg/" ".git/" "COPYING" "log14" "init6/" "dissector.lua" "log10analysis" "log12" ".gitignore" "libfprint/" "./" "old/" "log10" "prototype/" "dumps/" "README.md" "log11analysis" "lockbox/")
+
+ ("/home/bvn13/develop/_contrib/" (23854 9375 10401 186000) "../" "IntelliJ-jME-Plugin/" "fingerprint/" "./" "instagram4j/")
+
+ ("/home/bvn13/Documents/DIY/" (23841 61579 113260 823000) "Точилка для ножей.org" "../" "./")
+
+ ("/home/bvn13/develop/kb-layout-caps-led/draft/" (23756 53207 649154 964000) "../" "./" "get-main-layout.sh" "get-current-layout.sh" "turn-on.sh")
+
+ ("/home/bvn13/develop/kb-layout-caps-led/" (23758 60421 844126 413000) "../" "LICENSE" "scripts/" ".git/" "draft/" ".gitignore" "./" "daemons/" "README.md")
+
+ ("/home/bvn13/develop/kb-layout-caps-led/scripts/" (23758 59615 576274 41000) "../" "./" "kb-layout-signal-watcher.sh" "gnome-kb-layout-watcher.sh")
+
+ ("/home/bvn13/develop/kb-layout-caps-led/daemons/" (23756 53201 998129 768000) "../" "gnome-kb-layout-watcher.service" "kb-layout-signal-watcher.service" "./")
+
+ ("/home/bvn13/.local/share/" (23760 42564 104060 993000) "telepathy/" "gsettings-data-convert-old" "nautilus/" "polkit-1/" "xorg-old/" "JetBrains/" "gsettings-data-convert" "recently-used.xbel-old" "gnome-shell/" "kotlin/" "gvfs-metadata/" "../" "desktop-directories/" "labyrinth/" "vulkan/" "flatpak/" "app-info/" "mc/" "recently-used.xbel" "TelegramDesktop/" "gnome-settings-daemon/" "applications/" "man/" "xorg/" "TpLogger/" "./" "keyrings/" "folks-old/" "Steam/" "icc/" "scummvm/" "diffuse/" "webkitgtk/" "gegl-0.4/" "sounds/" "icons/" "mime/" "tracker/" "meld/" "fonts/" "webkitgtk-old/" "folks/" "recently-used.xbel.34Q4XZ" "remmina/" "rhythmbox/" "vlc/" "Trash/" "copyq/" "evolution/")
+
+ ("/home/bvn13/.local/" (23674 13995 295701 180000) "share/" "lib/" "../" "./" "bin/")
+
+ ("/home/bvn13/games/minetest/games/mineclone-2/" (23712 29763 1921 244000) "settingtypes.txt" "../" "GROUPS.md" "API.md" "LICENSE.txt" "settingtypes.txt~" "description.txt" "minetest.conf" "tools/" "MISSING_ENGINE_FEATURES.md" "./" "menu/" "mods/" "screenshot.png" "game.conf" "CONTRIBUTING.md" "README.md" "minetest.conf~")
+
+ ("/home/bvn13/develop/PriceProcessorHG/src/main/java/ru/bvn13/priceprocessor/" (23703 57524 832995 473000) "utils/" "gui/" "events/" "database/" "../" "MainDialogController.java" "settings/" "errors/" "./" "test.java" "views/" "systray/" "licensing/" "MainApp.java" "entities/" "uploads/" "workers/" "TerminationChecker.java")
+
+ ("/home/bvn13/develop/PriceProcessorHG/src/main/java/ru/bvn13/" (23685 20271 556334 754000) "priceprocessor/" "../" "./")
+
+ ("/home/bvn13/develop/PriceProcessorHG/src/main/java/ru/" (23685 20271 556334 754000) "../" "./" "bvn13/")
+
+ ("/home/bvn13/develop/PriceProcessorHG/src/main/java/" (23685 20271 556334 754000) "../" "com/" "ru/" "./" "META-INF/")
+
+ ("/home/bvn13/develop/PriceProcessorHG/src/main/" (23685 20271 595334 945000) "java/" "../" "./" "resources/")
+
+ ("/home/bvn13/develop/PriceProcessorHG/src/" (23685 20271 549334 720000) "../" "main/" "./")
+
+ ("/home/bvn13/develop/PriceProcessorHG/" (23703 58278 536759 689000) "PriceProcessor.iml" "settings.xml" "priceprocessor.properties" "pom.xml" "lib/" "src/" "../" ".hg/" "db/" "target/" "build.bat" "jooq-config.xml" "dataSources/" "PriceProcessor.ipr.bup" "wsdl-process.bat" "7z.exe" "notes.txt" "./" ".hgignore" "priceprocessor.xml" "PriceProcessor.iws" "site_connection.txt" "module_priceprocessor.xml" ".ideaDataSources/" "PriceProcessor.ipr")
+
+ ("/home/bvn13/develop/JIrcBot/" (23695 64831 402605 648000) "pom.xml" "src/" "jircbot.iml" "../" "LICENSE" "target/" ".idea/" ".git/" "jircbot.service" ".gitignore" "./" "config.json" "README.md" "docs/")
+
+ ("/home/bvn13/develop/JIrcBot/src/" (23682 46295 282389 775000) "../" "main/" "./")
+
+ ("/home/bvn13/develop/JIrcBot/src/main/" (23682 46295 297389 837000) "java/" "../" "./" "resources/")
+
+ ("/home/bvn13/develop/JIrcBot/src/main/java/" (23682 46295 282389 775000) "../" "ru/" "./")
+
+ ("/home/bvn13/develop/JIrcBot/src/main/java/ru/" (23682 46295 282389 775000) "../" "./" "bvn13/")
+
+ ("/home/bvn13/develop/JIrcBot/src/main/java/ru/bvn13/" (23682 46295 282389 775000) "../" "jircbot/" "./")
+
+ ("/home/bvn13/develop/JIrcBot/src/main/java/ru/bvn13/jircbot/" (23692 4113 712627 916000) "config/" "model/" "database/" "bot/" "../" "utilities/" "./" "documentation/" "MainApp.java" "web/" "listeners/" "services/")
+
+ ("/home/bvn13/develop/JIrcBot/src/main/java/ru/bvn13/jircbot/utilities/" (23682 46295 297389 837000) "DateTimeUtility.java" "../" "DTOUtil.java" "ViewHelper.java" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

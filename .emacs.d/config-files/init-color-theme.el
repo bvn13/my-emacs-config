@@ -14,7 +14,8 @@
 
 ;; set theme
 ;(load-theme 'tangotango t)
-(load-theme 'darktooth t)
+;(load-theme 'darktooth t)
+(load-theme 'leuven t)
 
 
 ;; powerline

@@ -196,7 +196,7 @@ static char *gnus-pointer[] = {
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (markdown-mode memoize markdown-mode+ markdown-preview-eww project-explorer neotree multiple-cursors telephone-line darktooth-theme spacemacs-theme sublime-themes doom-themes badger-theme nova-theme monokai-theme busybee-theme alect-themes gruvbox-theme which-key use-package tangotango-theme reverse-im powerline flatland-theme drag-stuff auto-complete anaconda-mode)))
+    (leuven-theme markdown-mode memoize markdown-mode+ markdown-preview-eww project-explorer neotree multiple-cursors telephone-line darktooth-theme spacemacs-theme sublime-themes doom-themes badger-theme nova-theme monokai-theme busybee-theme alect-themes gruvbox-theme which-key use-package tangotango-theme reverse-im powerline flatland-theme drag-stuff auto-complete anaconda-mode)))
  '(pdf-view-midnight-colors (quote ("#fdf4c1" . "#1d2021")))
  '(pos-tip-background-color "#FFFACE")
  '(pos-tip-foreground-color "#272822")
@@ -209,7 +209,7 @@ static char *gnus-pointer[] = {
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(markdown-header-delimiter-face ((t (:inherit markdown-markup-face :height 1.0))))
+ '(markdown-header-delimiter-face ((t (:inherit markdown-markup-face :height 3.0))))
  '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 1.7))))
  '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 1.4))))
  '(markdown-header-face-3 ((t (:inherit markdown-header-face :height 1.3))))

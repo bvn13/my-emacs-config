@@ -36,3 +36,6 @@
 
 ;; hide special chars for text highlightening
 (set 'org-hide-emphasis-markers t)
+
+;; alphabetical lists
+(set 'org-list-allow-alphabetical t)
