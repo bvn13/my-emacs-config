@@ -37,7 +37,8 @@
     ;;(set-default-font "Meslo LG L DZ Regular for Powerline")
     ;;(set-default-font "DejaVu Sans Mono for Powerline")
     ;;(set-default-font "Go Mono for Powerline")
-    (set-default-font "Iosevka Medium")
+    ;;(set-default-font "DejaVu Sans Mono")
+    (set-frame-font "DejaVu Sans Mono" nil t)
     (set-face-attribute 'default nil :height 100))
 
 ;; Load path for plugins
